@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link,NavLink } from 'react-router-dom';
 
 function NavbarComponent() {
 
@@ -12,8 +13,7 @@ function NavbarComponent() {
         <ul className='flex gap-7 cursor-pointer'>
             {routers.map((el,i)=>{
                 return <li key={i}>
-                    <a href={`/${el.toLowerCase()}`}
-                    className={pathname === el.toLowerCase()?'active':""}>{el}</a>
+                   <NavLink to={`/${el.toLowerCase()}`}> {el} </NavLink>
                     </li>
             })}
         </ul>
